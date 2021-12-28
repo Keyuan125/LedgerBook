@@ -1,0 +1,17 @@
+{% if records_list %}
+
+    <ul>
+    {% for r in records_list %}
+        <li><a href="/{{ r.comment }}/">{{ r }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No records are available.</p>
+    
+{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Submit">
+</form>
