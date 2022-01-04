@@ -18,5 +18,5 @@ class Record(models.Model):
     # Indicate if it's an expense or income
     expense_income = models.CharField(max_length=10)
     
-    def _str_(self):
+    def __str__(self):
         return self.item

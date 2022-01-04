@@ -21,5 +21,4 @@ from records import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('records/', include('records.urls')),
-    
 ]
